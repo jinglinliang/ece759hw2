@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -16,17 +17,6 @@ void printArray(int arr[], int n)
 } 
 
 
-void mySort(int array[], int n) { //my insertion sort
-    for (int i = 0; i < n; i++){
-        int min = i;
-        for (int j = i; j < n; j++){
-            if (array[j] < array[min]){
-                min = j;
-            }
-        }
-        swap(array[min], array[i]);
-    }
-} 
   
 int main() { 
     ifstream inFile;
@@ -50,7 +40,7 @@ int main() {
     // Record start time
     auto start = chrono::high_resolution_clock::now();
 
-    mySort(arr, size); 
+    sort(arr, arr+size);
 
     // Record end time
     auto finish = chrono::high_resolution_clock::now();
