@@ -1,11 +1,12 @@
 import random
 
-intmax = 1 << 30
-intmin = -(1 << 30)
+intmax = 10
+intmin = -10
 
-size = 1 << 10
+size = 1 << 3
 
-file = open('problem1.in','w') 
+file = open('problem2.in','w') 
+
 file.write(str(size))
 file.write('\n')
 
