@@ -63,7 +63,7 @@ int main() {
     // cout << "Elapsed time in nanoseconds : " 
 	// 	<< chrono::duration_cast<chrono::nanoseconds>(finish - start).count()
 	// 	<< " ns" << endl;
-    
+    delete[] arr;
     return 0; 
 } 
 
