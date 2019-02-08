@@ -61,9 +61,7 @@ int main(int argc, char *argv[]) {
     printArray(newarr, size); 
 
     cout << newarr[size-1] << endl;
-    cout << "Elapsed time in milliseconds : " 
-		<< chrono::duration_cast<chrono::milliseconds>(finish - start).count()
-		<< " ms" << endl;
+    cout << chrono::duration_cast<chrono::milliseconds>(finish - start).count() << endl;
 
     // cout << "Elapsed time in nanoseconds : " 
 	// 	<< chrono::duration_cast<chrono::nanoseconds>(finish - start).count()

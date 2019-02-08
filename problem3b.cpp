@@ -24,7 +24,6 @@ int main(int argc, char *argv[]) {
 
     int *matrix = new int[size1*size1];
     int *feature = new int[size2*size2];
-    int *res = new int[size3*size3];
 
     //read matrix
     for (int i = 0; i < size1; i++){
@@ -54,7 +53,6 @@ int main(int argc, char *argv[]) {
                     score += feature[x*size2 + y] * matrix[(i+x)*size1 + (j+y)];
                 }
             }
-            res[i*size3 + j] = score;
             if (score > globalMax) {
                 globalMax = score;
                 outi = i;
@@ -63,19 +61,11 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    for (int i=0; i < size3; i++){
-        for (int j = 0; j < size3; j++){
-            cout << res[i*size3 + j] << ' ';
-        }
-        cout << endl;
-    }
-
     cout << outi << endl;
     cout << outj << endl;
     cout << globalMax << endl;
      
     delete[] matrix;
     delete[] feature;
-    delete[] res;
 
 }

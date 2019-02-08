@@ -56,9 +56,7 @@ int main() {
     auto finish = chrono::high_resolution_clock::now();
   
     printArray(arr, size); 
-    cout << "Elapsed time in milliseconds : " 
-		<< chrono::duration_cast<chrono::milliseconds>(finish - start).count()
-		<< " ms" << endl;
+    cout << chrono::duration_cast<chrono::milliseconds>(finish - start).count() << endl;
 
     // cout << "Elapsed time in nanoseconds : " 
 	// 	<< chrono::duration_cast<chrono::nanoseconds>(finish - start).count()
